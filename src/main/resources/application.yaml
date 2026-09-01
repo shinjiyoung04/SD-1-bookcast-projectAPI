@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: teamproject1
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/teamproject1?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: false
+        highlight_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
+    org.hibernate.org.jdbc.extract: trace
+
+server:
+  port: 8080
+  servlet:
+    session:
+      tracking-modes: cookie
+
+kakao:
+  rest-api-key: 436471f21ed42c695529f935449baaa4
+  redirect-uri: http://localhost:5173/member/login
+
+external:
+  naver:
+    client-id: RoC7kAoomAPwN2G8p0Vk
+    client-secret: xRz9lTForb
+
+  nl:
+    key: 6f4e26ee3fb25e275c8fb6d5b0f840d3bffb192839fc2e900e215882294dca53
+
+
+  aladin:
+    base-url: https://www.aladin.co.kr/ttb/api
+    ttb-key: ttbsoook02241834001
+
+  data4library:
+    base-url: http://data4library.kr/api
+    auth-key: e901de5891dccb16942bc361f54b61e6a5f0c579a7bd868bc5a40cfeb19090d8
+
+data4library:
+  base-url: http://data4library.kr/api
+  auth-key: e901de5891dccb16942bc361f54b61e6a5f0c579a7bd868bc5a40cfeb19090d8
+
+bookcast:
+  ai:
+    base-url: http://localhost:8000
+    connect-timeout-ms: 3000
+    read-timeout-ms: 30000
